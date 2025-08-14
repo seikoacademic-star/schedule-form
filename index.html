@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_W17QWplDSHC0SvCSH6PICw/seiko_red_grey_form.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都合の悪い日 提出フォーム</title>
+    <link href="./都合の悪い日 提出フォーム1843_files/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(186, 49, 49, 0.9) 0%, rgba(186, 49, 49, 0.7) 100%);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 80px;
+            height: 64px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .form-content {
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="text"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ba3131;
+            box-shadow: 0 0 0 3px rgba(186, 49, 49, 0.1);
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .add-schedule-btn {
+            background: linear-gradient(135deg, #ba3131 0%, #a02828 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .add-schedule-btn:hover {
+            background: linear-gradient(135deg, #a02828 0%, #8b2020 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(186, 49, 49, 0.3);
+        }
+
+        .schedule-item {
+            background: #f8f8f8;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .schedule-item:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-header {
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-schedule {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .delete-schedule:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ba3131;
+        }
+
+        .time-selection {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .time-row {
+            display: flex;
+            gap: 15px;
+            align-items: end;
+        }
+
+        .time-group {
+            flex: 1;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #ba3131 0%, #a02828 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #a02828 0%, #8b2020 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(186, 49, 49, 0.4);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .success-message, .error-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .form-content {
+                padding: 20px;
+            }
+            
+            .time-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style></head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./都合の悪い日 提出フォーム1843_files/seiko_logo_academic-pavilion.png" alt="Logo" class="logo">
+        </div>
+        
+        <div class="form-content">
+            <h1>都合の悪い日 提出フォーム</h1>
+            <p class="subtitle">複数の日程を一度に報告できます。各日程ごとに備考を入力してください。</p>
+            
+            <form id="scheduleForm">
+                <div class="form-group">
+                    <label for="submitterName">提出者名</label>
+                    <input type="text" id="submitterName" name="submitterName" placeholder="お名前を入力してください" required="">
+                </div>
+                
+                <div class="section-title">都合の悪い日程</div>
+                
+                <button type="button" class="add-schedule-btn" onclick="addSchedule()">
+                    <i class="fas fa-plus"></i> 日程を追加
+                </button>
+                
+                <div id="scheduleContainer">
+                    <div class="schedule-item">
+                        <div class="schedule-header">
+                            日程 1
+                            <button type="button" class="delete-schedule" onclick="deleteSchedule(this)" style="display: none;">
+                                <i class="fas fa-trash"></i> 削除
+                            </button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>日付</label>
+                            <input type="date" name="date" required="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>タイプ</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" name="type_1" value="終日不可" checked="" onchange="toggleTimeSelection(this)">
+                                    <span>終日不可</span>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="type_1" value="時間帯指定" onchange="toggleTimeSelection(this)">
+                                    <span>時間帯指定</span>
+                                </div>
+                            </div>
+                            
+                            <div class="time-selection">
+                                <div class="time-row">
+                                    <div class="time-group">
+                                        <label>開始時刻</label>
+                                        <select name="startTime">
+                                            <option value="">選択してください</option>
+                                        <option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option></select>
+                                    </div>
+                                    <div class="time-group">
+                                        <label>終了時刻</label>
+                                        <select name="endTime">
+                                            <option value="">選択してください</option>
+                                        <option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>備考（任意）</label>
+                            <textarea name="remarks" rows="3" placeholder="この日程に関する補足事項があれば入力してください"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> 送信
+                </button>
+                
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> 送信中...
+                </div>
+                
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i> 送信が完了しました！
+                </div>
+                
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i> 送信に失敗しました。もう一度お試しください。
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let scheduleCount = 1;
+
+        // 時間選択肢を生成
+        function generateTimeOptions() {
+            const options = [];
+            for (let hour = 8; hour <= 21; hour++) {
+                for (let minute = 0; minute < 60; minute += 30) {
+                    const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                    options.push(time);
+                }
+            }
+            // 終了時刻用に22:00を追加
+            options.push('22:00');
+            return options;
+        }
+
+        // 時間選択肢を初期化
+        function initializeTimeOptions() {
+            const timeOptions = generateTimeOptions();
+            const selects = document.querySelectorAll('select[name="startTime"], select[name="endTime"]');
+            
+            selects.forEach(select => {
+                // 既存のオプションをクリア（最初の選択してくださいオプション以外）
+                while (select.children.length > 1) {
+                    select.removeChild(select.lastChild);
+                }
+                
+                timeOptions.forEach(time => {
+                    const option = document.createElement('option');
+                    option.value = time;
+                    option.textContent = time;
+                    select.appendChild(option);
+                });
+            });
+        }
+
+        // 時間帯選択の表示/非表示
+        function toggleTimeSelection(radio) {
+            const scheduleItem = radio.closest('.schedule-item');
+            const timeSelection = scheduleItem.querySelector('.time-selection');
+            
+            if (radio.value === '時間帯指定') {
+                timeSelection.style.display = 'block';
+                // 時間選択を必須にする
+                const startTime = timeSelection.querySelector('select[name="startTime"]');
+                const endTime = timeSelection.querySelector('select[name="endTime"]');
+                startTime.required = true;
+                endTime.required = true;
+            } else {
+                timeSelection.style.display = 'none';
+                // 時間選択を任意にする
+                const startTime = timeSelection.querySelector('select[name="startTime"]');
+                const endTime = timeSelection.querySelector('select[name="endTime"]');
+                startTime.required = false;
+                endTime.required = false;
+                startTime.value = '';
+                endTime.value = '';
+            }
+        }
+
+        // 日程を追加
+        function addSchedule() {
+            if (scheduleCount >= 10) {
+                alert('最大10件まで追加できます。');
+                return;
+            }
+            
+            scheduleCount++;
+            const container = document.getElementById('scheduleContainer');
+            const newSchedule = document.createElement('div');
+            newSchedule.className = 'schedule-item';
+            
+            newSchedule.innerHTML = `
+                <div class="schedule-header">
+                    日程 ${scheduleCount}
+                    <button type="button" class="delete-schedule" onclick="deleteSchedule(this)">
+                        <i class="fas fa-trash"></i> 削除
+                    </button>
+                </div>
+                
+                <div class="form-group">
+                    <label>日付</label>
+                    <input type="date" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>タイプ</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="type_${scheduleCount}" value="終日不可" checked onchange="toggleTimeSelection(this)">
+                            <span>終日不可</span>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="type_${scheduleCount}" value="時間帯指定" onchange="toggleTimeSelection(this)">
+                            <span>時間帯指定</span>
+                        </div>
+                    </div>
+                    
+                    <div class="time-selection">
+                        <div class="time-row">
+                            <div class="time-group">
+                                <label>開始時刻</label>
+                                <select name="startTime">
+                                    <option value="">選択してください</option>
+                                </select>
+                            </div>
+                            <div class="time-group">
+                                <label>終了時刻</label>
+                                <select name="endTime">
+                                    <option value="">選択してください</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>備考（任意）</label>
+                    <textarea name="remarks" rows="3" placeholder="この日程に関する補足事項があれば入力してください"></textarea>
+                </div>
+            `;
+            
+            container.appendChild(newSchedule);
+            initializeTimeOptions(); // 新しい日程の時間選択肢を初期化
+            
+            // 削除ボタンを表示
+            updateDeleteButtons();
+        }
+
+        // 日程を削除
+        function deleteSchedule(button) {
+            if (document.querySelectorAll('.schedule-item').length <= 1) {
+                alert('最低1つの日程は必要です。');
+                return;
+            }
+            
+            button.closest('.schedule-item').remove();
+            scheduleCount--;
+            updateScheduleNumbers();
+            updateDeleteButtons();
+        }
+
+        // 日程番号を更新
+        function updateScheduleNumbers() {
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            scheduleItems.forEach((item, index) => {
+                const header = item.querySelector('.schedule-header');
+                const deleteButton = header.querySelector('.delete-schedule');
+                header.innerHTML = `日程 ${index + 1}`;
+                if (deleteButton) {
+                    header.appendChild(deleteButton);
+                }
+                
+                // ラジオボタンのname属性を更新
+                const radios = item.querySelectorAll('input[type="radio"]');
+                radios.forEach(radio => {
+                    radio.name = `type_${index + 1}`;
+                });
+            });
+        }
+
+        // 削除ボタンの表示/非表示を更新
+        function updateDeleteButtons() {
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            scheduleItems.forEach((item, index) => {
+                const deleteButton = item.querySelector('.delete-schedule');
+                if (scheduleItems.length > 1) {
+                    deleteButton.style.display = 'block';
+                } else {
+                    deleteButton.style.display = 'none';
+                }
+            });
+        }
+
+        // フォーム送信
+        document.getElementById('scheduleForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.submit-btn');
+            const loading = document.querySelector('.loading');
+            const successMessage = document.querySelector('.success-message');
+            const errorMessage = document.querySelector('.error-message');
+            
+            // メッセージをリセット
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // ローディング表示
+            submitBtn.disabled = true;
+            loading.style.display = 'block';
+            
+            try {
+                const submitterName = document.getElementById('submitterName').value;
+                const scheduleItems = document.querySelectorAll('.schedule-item');
+                
+                // 各日程を個別に送信
+                for (let i = 0; i < scheduleItems.length; i++) {
+                    const item = scheduleItems[i];
+                    const date = item.querySelector('input[name="date"]').value;
+                    const typeRadio = item.querySelector('input[type="radio"]:checked');
+                    const type = typeRadio.value;
+                    const remarks = item.querySelector('textarea[name="remarks"]').value;
+                    
+                    let timeDetail = type;
+                    if (type === '時間帯指定') {
+                        const startTime = item.querySelector('select[name="startTime"]').value;
+                        const endTime = item.querySelector('select[name="endTime"]').value;
+                        
+                        if (!startTime || !endTime) {
+                            throw new Error('時間帯指定を選択した場合は、開始時刻と終了時刻の両方を選択してください。');
+                        }
+                        
+                        if (startTime >= endTime) {
+                            throw new Error('終了時刻は開始時刻より後の時刻を選択してください。');
+                        }
+                        
+                        timeDetail = `${startTime} 〜 ${endTime}`;
+                    }
+                    
+                    // データを送信
+                    const formData = new FormData();
+                    formData.append('name', submitterName);
+                    formData.append('date', date);
+                    formData.append('type', type);
+                    formData.append('timeDetail', timeDetail);
+                    formData.append('remarks', remarks);
+                    
+                    const response = await fetch('https://script.google.com/macros/s/AKfycbzbSiSIQwGvs01hEYc-DWr9PhgTT2vJfDT559EvgblEEbBqwfzPk2MB2OAPnxelOUY/exec', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('送信に失敗しました');
+                    }
+                }
+                
+                // 成功
+                successMessage.style.display = 'block';
+                document.getElementById('scheduleForm').reset();
+                
+                // フォームをリセット
+                const container = document.getElementById('scheduleContainer');
+                container.innerHTML = `
+                    <div class="schedule-item">
+                        <div class="schedule-header">
+                            日程 1
+                            <button type="button" class="delete-schedule" onclick="deleteSchedule(this)" style="display: none;">
+                                <i class="fas fa-trash"></i> 削除
+                            </button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>日付</label>
+                            <input type="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>タイプ</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" name="type_1" value="終日不可" checked onchange="toggleTimeSelection(this)">
+                                    <span>終日不可</span>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="type_1" value="時間帯指定" onchange="toggleTimeSelection(this)">
+                                    <span>時間帯指定</span>
+                                </div>
+                            </div>
+                            
+                            <div class="time-selection">
+                                <div class="time-row">
+                                    <div class="time-group">
+                                        <label>開始時刻</label>
+                                        <select name="startTime">
+                                            <option value="">選択してください</option>
+                                        </select>
+                                    </div>
+                                    <div class="time-group">
+                                        <label>終了時刻</label>
+                                        <select name="endTime">
+                                            <option value="">選択してください</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>備考（任意）</label>
+                            <textarea name="remarks" rows="3" placeholder="この日程に関する補足事項があれば入力してください"></textarea>
+                        </div>
+                    </div>
+                `;
+                scheduleCount = 1;
+                initializeTimeOptions();
+                
+            } catch (error) {
+                errorMessage.textContent = error.message;
+                errorMessage.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                loading.style.display = 'none';
+            }
+        });
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTimeOptions();
+        });
+    </script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDuq6Zwp2X1G8oLszK%2FCnEw29sJ%2BgLH%2BDlxGTgp4McJtYTUtRjMbi%2Fu9DjSPREi0E7MWu0cxsDdUSL8kG%2FctMQiAmtFndZ5ybPraqGezS8%2FN3OPsAcMZkKYEzgE5CwzRKKcUwVquIFyuFGGLW8itM9NUgQxAchIOFoKEtLp6lH3br1NQ8NLQL9lU6iPjAUCFJJlCeJuUP49LZeuks4ODdwGmVv8VkbbJpGnkWE38wjmr8X0XPPaBvXfRQSVPlv%2Be8kYMxs3aHfCMq%2FR3LeqgLYP4WZqh8S%2FpQ9kOVL%2FWb%2Fs3r68XWqyw8HzU2GrlmfexNniQB5gvg%2F58uNCvQ8repkmR3Q0D744LW1ySjJv%2FTbZEFBgBGlu%2Bfn241ChkOOtLvNmVAqrbxOv%2FNGEcmWi4tEymQydV6vp6UuT4Dq0uPVFsTlWlNTwQiHr1rl4ZHXk1aSbxgtHTq%2Bi5E4R7vMwSkot7%2FimNeBUMUnYvHidmq%2F3bRmPJOUUHTBdSspuVfKIWSDg%3D%3D";
+        window.__genspark_locale = "ja-JP";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDuq6Zwp2X1G8oLszK/CnEw29sJ+gLH+DlxGTgp4McJtYTUtRjMbi/u9DjSPREi0E7MWu0cxsDdUSL8kG/ctMQiAmtFndZ5ybPraqGezS8/N3OPsAcMZkKYEzgE5CwzRKKcUwVquIFyuFGGLW8itM9NUgQxAchIOFoKEtLp6lH3br1NQ8NLQL9lU6iPjAUCFJJlCeJuUP49LZeuks4ODdwGmVv8VkbbJpGnkWE38wjmr8X0XPPaBvXfRQSVPlv+e8kYMxs3aHfCMq/R3LeqgLYP4WZqh8S/pQ9kOVL/Wb/s3r68XWqyw8HzU2GrlmfexNniQB5gvg/58uNCvQ8repkmR3Q0D744LW1ySjJv/TbZEFBgBGlu+fn241ChkOOtLvNmVAqrbxOv/NGEcmWi4tEymQydV6vp6UuT4Dq0uPVFsTlWlNTwQiHr1rl4ZHXk1aSbxgtHTq+i5E4R7vMwSkot7/imNeBUMUnYvHidmq/3bRmPJOUUHTBdSspuVfKIWSDg==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./都合の悪い日 提出フォーム1843_files/notice_dialog.js"></script>
+    </body></html>
